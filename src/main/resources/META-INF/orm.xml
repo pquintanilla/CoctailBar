@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<entity-mappings
+	xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.eclipse.org/eclipselink/xsds/persistence/orm http://www.eclipse.org/eclipselink/xsds/eclipselink_orm_2_1.xsd"
+	version="2.1">
+
+	<entity class="fr.formation.entity.Ingredient">
+		<table name="ingredient"></table>
+		<attributes>
+			<id name="id">
+				<column name="ID_INGREDIENT" />
+				<generated-value strategy="IDENTITY" />
+			</id>
+			<basic name="etat">
+				<column name="STATE" />
+			</basic>
+			<basic name="name">
+				<column name="NAME" />
+			</basic>
+		</attributes>
+	</entity>
+	
+	<entity class="fr.formation.entity.Cocktail">
+		<table name="cocktail"></table>
+		<attributes>
+			<id name="id">
+				<column name="ID_COCKTAIL" />
+				<generated-value strategy="IDENTITY" />
+			</id>
+			<basic name="name">
+				<column name="NAME" />
+			</basic>	
+			<basic name="price">
+				<column name="PRICE" />
+			</basic>
+			<basic name="isAlcohol">
+				<column name="ALCOHOL_FLAG" />
+			</basic>
+			
+		</attributes>
+	</entity>
+</entity-mappings>
